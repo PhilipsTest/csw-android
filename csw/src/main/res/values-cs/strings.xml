@@ -17,7 +17,7 @@
   <string name="csw_privacy_notice">[cs]Privacy Notice</string>
   <string name="csw_privacy_notice_message">Spravujte své soukromí. Více informací najdete v {zásadách ochrany osobních údajů}.</string>
   <string name="csw_privacy_settings">Nastavení soukromí</string>
-  <string name="csw_privacy_settings_desc">Spravujte své soukromí. Více informací najdete v zásadách ochrany osobních údajů.</string>
+  <string name="csw_privacy_settings_desc">Spravujte své soukromí. Více informací najdete v {zásadách ochrany osobních údajů.}</string>
   <string name="csw_problem_occurred_error_message">Došlo k problému (chyba %d). Zkuste to znovu.</string>
   <string name="csw_problem_occurred_error_title">Došlo k problému</string>
   <string name="csw_user_session_expired">Vaše relace je neplatná. Odhlaste se a znovu se přihlaste</string>

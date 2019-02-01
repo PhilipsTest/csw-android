@@ -15,6 +15,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.philips.platform.appinfra.rest.RestInterface;
 import com.philips.platform.csw.CswBaseFragment;
 import com.philips.platform.csw.CswConstants;
@@ -176,8 +177,10 @@ public class PermissionFragment extends CswBaseFragment implements PermissionCon
 
     private void showErrorDialog(boolean goBack, String title, String message) {
         CswLogger.e(TAG, message);
-        DialogView dialogView = getDialogView(goBack);
-        dialogView.showDialog(getActivity(), title, message);
+        if (isVisible()) {
+            DialogView dialogView = getDialogView(goBack);
+            dialogView.showDialog(getActivity(), title, message);
+        }
     }
 
     @Override
