@@ -28,8 +28,8 @@ pipeline {
                 sh 'printenv'
                 deleteDir()
                 sh """
-                    if [ -d ~/workspace/master ]; then
-                        git clone ~/workspace/master ${WORKSPACE}
+                    if [ -d ~/workspace/master1 ]; then
+                        git clone ~/workspace/master1 ${WORKSPACE}
                     fi
                 """
                 checkout([$class: 'GitSCM', branches: [[name: '*/'+env.BRANCH_NAME]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CloneOption', depth: 0, honorRefspec: true, noTags: false, reference: '', shallow: false, timeout: 20]], userRemoteConfigs: [[credentialsId: 'd51576c2-35b7-4136-a1fa-5a638fa03b01', url: 'ssh://tfsemea1.ta.philips.com:22/tfs/TPC_Region02/Innersource/_git/csw-android', refspec: '+refs/heads/'+env.BRANCH_NAME+':refs/remotes/origin/'+env.BRANCH_NAME]]])
