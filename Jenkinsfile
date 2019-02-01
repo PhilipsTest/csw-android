@@ -58,7 +58,7 @@ pipeline {
             steps {
                 sh '''#!/bin/bash -l
                     set -e
-                    ./gradlew --full-stacktrace saveResDep saveAllResolvedDependenciesGradleFormat zipDocuments artifactoryPublish
+                    ./gradlew --full-stacktrace saveResDep saveAllResolvedDependenciesGradleFormat artifactoryPublish
                 '''
             }
         }
