@@ -140,3 +140,14 @@ pitest {
             'com.philips.platform.csw.injection.DaggerCswComponent$Builder' // Created by Dagger
     ]
 }
+
+task('printPlatformVersion') {
+    doLast {
+        if (new File('platformversion.txt').exists()) {
+            new File('platformversion.txt').delete()
+        }
+        File platformversion = new File('platformversion.txt')
+        platformversion.append(version)
+        println "Platform version stored in platformversion.txt"
+    }
+}
