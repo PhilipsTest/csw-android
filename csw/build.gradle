@@ -90,7 +90,6 @@ dependencies {
     implementation philipsdeps.pif
     implementation philipsdeps.uAppFwLib
     implementation philipsdeps.uid
-    implementation philipsdeps.uikitLib
     implementation philipsdeps.AppInfra
 
 
