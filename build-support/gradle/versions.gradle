@@ -94,20 +94,11 @@ ext.deps = [
                 supportv4    : "com.android.support:support-v4:${ext.versions.support}",
         ],
 
-        // Testing
-        support_test                  : [
-                rules : "com.android.support.test:rules:1.0.2",
-                runner: "com.android.support.test:runner:1.0.2",
-        ],
-        androidx_test                 : [
-                rules : "androidx.test:rules:${ext.versions.androidx}",
-                runner: "androidx.test:runner:${ext.versions.androidx}"
-        ],
+
         assertj                       : 'com.squareup.assertj:assertj-android:1.2.0',
         butterknife_gradle            : 'com.jakewharton:butterknife-gradle-plugin:8.4.0', // Held at 8.4.0 since 8.8.1 is giving an issue, see: https://github.com/JakeWharton/butterknife/issues/1130
         junit                         : 'junit:junit:4.12',
         mockito                       : "org.mockito:mockito-core:${ext.versions.mockito}",
-        multidex                      : 'com.android.support:multidex:1.0.3',
         powermock_api_mockito         : "org.powermock:powermock-api-mockito2:${ext.versions.powermock}",
         powermock_classloading_xstream: "org.powermock:powermock-classloading-xstream:${ext.versions.powermock}",
         powermock_junit               : "org.powermock:powermock-module-junit4:${ext.versions.powermock}",
