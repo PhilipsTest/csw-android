@@ -7,7 +7,7 @@
 
 package com.philips.platform.csw;
 
-import android.content.Context;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -28,7 +28,7 @@ import com.philips.platform.uid.utils.UIDActivity;
 
 import java.util.List;
 
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 
 public class CswActivity extends UIDActivity implements OnClickListener, ActionBarListener {
 
@@ -52,10 +52,7 @@ public class CswActivity extends UIDActivity implements OnClickListener, ActionB
         initUI();
     }
 
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
-    }
+
 
     @Override
     public void onBackPressed() {

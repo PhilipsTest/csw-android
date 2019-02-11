@@ -71,7 +71,6 @@ ext.repos.ietrelease = ext.repos.base+"/iet-mobile-android-release-local"
 ext.repos.hsdprelease = ext.repos.base+"/HSDP-pkgs-android-release"
 
 ext.deps = [
-        calligraphy                   : 'uk.co.chrisjenx:calligraphy:2.3.0',
         dagger                        : [
                 androidprocessor: "com.google.dagger:dagger-android-processor:${ext.versions.dagger}",
                 androidsupport  : "com.google.dagger:dagger-android-support:${ext.versions.dagger}",
