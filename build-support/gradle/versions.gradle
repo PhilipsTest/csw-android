@@ -22,13 +22,13 @@ ext.versions = [
         buildtools                          : '28.0.2',
         support                             : '28.0.0',
         jacoco                              : '0.8.0',
-        dagger                              : '2.16',
+        dagger                              : '2.21',
         renderscriptTargetApi               : 27,
         jacocoToolVersionForRobolectricTests: '0.7.6.201602180812',
         jacocoToolVersion                   : '0.7.4.201502262128',
         sourceCompatibility                 : 1.8,
         targetCompatibility                 : 1.8,
-        androidx                            : '1.1.0',
+        androidx                            : '1.1.1',
         mockito                             : '2.8.9', // Mockito and Powermock need to be upgraded in tandem, see: https://github.com/powermock/powermock/wiki/Mockito#supported-versions
         powermock                           : '1.7.4', // Mockito and Powermock need to be upgraded in tandem, see: https://github.com/powermock/powermock/wiki/Mockito#supported-versions
         robolectric                         : '4.1'
@@ -71,8 +71,6 @@ ext.repos.ietrelease = ext.repos.base+"/iet-mobile-android-release-local"
 ext.repos.hsdprelease = ext.repos.base+"/HSDP-pkgs-android-release"
 
 ext.deps = [
-        adobemobilelib                : 'com.adobe.mobile:adobeMobileLibrary:4.16.1',
-        butterknife                   : 'com.jakewharton:butterknife:8.8.1',
         calligraphy                   : 'uk.co.chrisjenx:calligraphy:2.3.0',
         dagger                        : [
                 androidprocessor: "com.google.dagger:dagger-android-processor:${ext.versions.dagger}",
@@ -89,7 +87,6 @@ ext.deps = [
 
 
         assertj                       : 'com.squareup.assertj:assertj-android:1.2.0',
-        butterknife_gradle            : 'com.jakewharton:butterknife-gradle-plugin:8.4.0', // Held at 8.4.0 since 8.8.1 is giving an issue, see: https://github.com/JakeWharton/butterknife/issues/1130
         junit                         : 'junit:junit:4.12',
         mockito                       : "org.mockito:mockito-core:${ext.versions.mockito}",
         powermock_api_mockito         : "org.powermock:powermock-api-mockito2:${ext.versions.powermock}",

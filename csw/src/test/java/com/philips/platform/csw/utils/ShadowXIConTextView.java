@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import com.philips.cdp.registration.ui.customviews.XIconTextView;
+
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;

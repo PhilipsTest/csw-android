@@ -1,7 +1,6 @@
 package com.philips.platform.csw.justintime;
 
 import com.google.common.collect.ImmutableMap;
-import com.philips.platform.catk.datamodel.ConsentDTO;
 import com.philips.platform.csw.BuildConfig;
 import com.philips.platform.csw.R;
 import com.philips.platform.csw.justintime.spy.ConsentManagerInterfaceSpy;
@@ -10,7 +9,7 @@ import com.philips.platform.csw.justintime.spy.ViewSpy;
 import com.philips.platform.csw.mock.AppInfraInterfaceMock;
 import com.philips.platform.pif.chi.ConsentError;
 import com.philips.platform.pif.chi.datamodel.ConsentDefinition;
-import com.philips.platform.pif.chi.datamodel.ConsentStates;
+
 
 import org.junit.Before;
 import org.junit.Test;
@@ -31,7 +30,6 @@ public class JustInTimeConsentPresenterTest {
     private ConsentManagerInterfaceSpy consentManagerInterface;
     private ConsentDefinition consentDefinition;
     private JustInTimeWidgetHandlerSpy completionListener;
-    private ConsentDTO consentDTO;
     private ConsentError consentError;
 
     @Before
@@ -40,7 +38,6 @@ public class JustInTimeConsentPresenterTest {
         view = new ViewSpy();
         consentManagerInterface = new ConsentManagerInterfaceSpy();
         appInfraMock.consentManagerInterface = consentManagerInterface;
-        consentDTO = new ConsentDTO("", ConsentStates.active, "", 0);
         consentDefinition = new ConsentDefinition(0, 0, Arrays.asList("firstType", "secondType"), 0);
         consentError = new ConsentError("", 1234);
         completionListener = new JustInTimeWidgetHandlerSpy();
@@ -171,7 +168,7 @@ public class JustInTimeConsentPresenterTest {
     }
 
     private void givenPostSucceeds() {
-        consentManagerInterface.callsCallback_onPostConsentSuccess(consentDTO);
+        consentManagerInterface.callsCallback_onPostConsentSuccess();
     }
 
     private void givenPostFails() {
