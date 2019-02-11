@@ -10,8 +10,9 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 
-import com.philips.cdp.registration.ui.utils.FontLoader;
+
 import com.philips.platform.csw.utils.CswTestApplication;
+import com.philips.platform.csw.utils.FontLoader;
 import com.philips.platform.csw.utils.ShadowXIConTextView;
 import com.philips.platform.uid.thememanager.ThemeUtils;
 

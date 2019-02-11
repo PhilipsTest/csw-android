@@ -4,7 +4,6 @@
  */
 
 apply plugin: 'com.android.library'
-apply plugin: 'com.jakewharton.butterknife'
 apply plugin: 'pl.droidsonroids.pitest'
 
 apply from: project.rootDir.absolutePath + '/build-support/gradle/cdpscm.gradle'
@@ -15,11 +14,7 @@ apply from: project.rootDir.absolutePath + '/build-support/gradle/tasks.gradle'
 
 archivesBaseName = strings.csw.artifactName
 
-buildscript {
-    dependencies {
-        classpath deps.butterknife_gradle
-    }
-}
+
 
 android {
     compileSdkVersion versions.sdk
@@ -80,11 +75,12 @@ dependencies {
     implementation deps.gson
     implementation deps.dagger.dagger
     implementation deps.dagger.androidsupport
-    implementation deps.calligraphy
     implementation deps.support.recyclerview
     implementation deps.support.appcompatv7
     implementation deps.support.supportv4
     annotationProcessor deps.dagger.compiler
+
+
 
 
     implementation philipsdeps.pif
@@ -107,7 +103,7 @@ dependencies {
     testImplementation deps.powermock_junit_rule
     testImplementation deps.powermock_junit_rule_agent
     testImplementation deps.powermock_classloading_xstream
-    testImplementation deps.adobemobilelib
+    //testImplementation deps.adobemobilelib
 }
 
 task updateResources(type: Exec) {

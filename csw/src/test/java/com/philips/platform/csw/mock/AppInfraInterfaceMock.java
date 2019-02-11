@@ -7,7 +7,7 @@ import android.content.Context;
 import com.adobe.mobile.Analytics;
 import com.philips.platform.appinfra.AppInfraInterface;
 import com.philips.platform.appinfra.abtestclient.ABTestClientInterface;
-import com.philips.platform.appinfra.aikm.AIKMInterface;
+
 import com.philips.platform.appinfra.appconfiguration.AppConfigurationInterface;
 import com.philips.platform.appinfra.appidentity.AppIdentityInterface;
 import com.philips.platform.appinfra.appupdate.AppUpdateInterface;
@@ -15,6 +15,7 @@ import com.philips.platform.appinfra.consentmanager.ConsentManagerInterface;
 import com.philips.platform.appinfra.consentmanager.consenthandler.DeviceStoredConsentHandler;
 import com.philips.platform.appinfra.internationalization.InternationalizationInterface;
 import com.philips.platform.appinfra.languagepack.LanguagePackInterface;
+import com.philips.platform.appinfra.logging.CloudLoggingInterface;
 import com.philips.platform.appinfra.logging.LoggingInterface;
 import com.philips.platform.appinfra.rest.RestInterface;
 import com.philips.platform.appinfra.securestorage.SecureStorageInterface;
@@ -80,6 +81,11 @@ public class AppInfraInterfaceMock implements AppInfraInterface {
                 return null;
             }
         };
+    }
+
+    @Override
+    public CloudLoggingInterface getCloudLogging() {
+        return null;
     }
 
     @Override
@@ -270,10 +276,7 @@ public class AppInfraInterfaceMock implements AppInfraInterface {
         return null;
     }
 
-    @Override
-    public AIKMInterface getAiKmInterface() {
-        return null;
-    }
+
 
     @Override
     public ConsentManagerInterface getConsentManager() {
