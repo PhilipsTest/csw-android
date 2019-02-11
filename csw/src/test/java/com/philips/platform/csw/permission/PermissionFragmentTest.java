@@ -75,16 +75,6 @@ public class PermissionFragmentTest {
         verify(confirmDialogView).hideDialog();
     }
 
-    @Test
-    public void onResume_hidesErrorDialogIfAny() throws Exception {
-        PowerMockito.whenNew(DialogView.class).withAnyArguments()
-                .thenReturn(this.errorDialogView);
-        PowerMockito.when(mockContext.getString(anyInt())).thenReturn("");
-
-        permissionFragment.showErrorDialog(true, 0, 0);
-        permissionFragment.onResume();
-        verify(errorDialogView).hideDialog();
-    }
 
     @Test
     public void onResume_hidesProgressDialogIfAny() throws Exception {
