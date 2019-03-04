@@ -53,7 +53,8 @@ artifactory {
 
     publish {
         repository {
-            repoKey = objcdp.getArtifactoryPublishRepoKey()
+            // Every successful develop build will publish newCSW  release version in release artifactory
+            repoKey = "iet-mobile-android-release-local"
             username = "320049003"
             password = "#W3llc0m3"
 
