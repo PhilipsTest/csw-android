@@ -10,7 +10,7 @@
         android:background="?attr/uidNavigationPrimaryBackgroundColor"
         android:elevation="8dp">
 
-        <com.philips.cdp.registration.ui.customviews.XIconTextView
+        <com.philips.platform.csw.utils.XIconTextView
             android:id="@+id/csw_textview_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

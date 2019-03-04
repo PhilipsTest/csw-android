@@ -1,7 +1,6 @@
 package com.philips.platform.csw.justintime;
 
 import com.google.common.collect.ImmutableMap;
-import com.philips.platform.catk.datamodel.ConsentDTO;
 import com.philips.platform.csw.BuildConfig;
 import com.philips.platform.csw.R;
 import com.philips.platform.csw.justintime.spy.ConsentManagerInterfaceSpy;
@@ -10,7 +9,7 @@ import com.philips.platform.csw.justintime.spy.ViewSpy;
 import com.philips.platform.csw.mock.AppInfraInterfaceMock;
 import com.philips.platform.pif.chi.ConsentError;
 import com.philips.platform.pif.chi.datamodel.ConsentDefinition;
-import com.philips.platform.pif.chi.datamodel.ConsentStates;
+
 
 import org.junit.Before;
 import org.junit.Test;
@@ -31,7 +30,6 @@ public class JustInTimeConsentPresenterTest {
     private ConsentManagerInterfaceSpy consentManagerInterface;
     private ConsentDefinition consentDefinition;
     private JustInTimeWidgetHandlerSpy completionListener;
-    private ConsentDTO consentDTO;
     private ConsentError consentError;
 
     @Before
@@ -40,7 +38,6 @@ public class JustInTimeConsentPresenterTest {
         view = new ViewSpy();
         consentManagerInterface = new ConsentManagerInterfaceSpy();
         appInfraMock.consentManagerInterface = consentManagerInterface;
-        consentDTO = new ConsentDTO("", ConsentStates.active, "", 0);
         consentDefinition = new ConsentDefinition(0, 0, Arrays.asList("firstType", "secondType"), 0);
         consentError = new ConsentError("", 1234);
         completionListener = new JustInTimeWidgetHandlerSpy();
@@ -64,12 +61,6 @@ public class JustInTimeConsentPresenterTest {
         thenPageIsTagged("jitConsent", ImmutableMap.of("consentType", "firstType|secondType"));
     }
 
-    @Test
-    public void onConsentGivenShowsErrorWhenOffline() {
-        givenUserIsOffline();
-        whenGivingConsent();
-        thenErrorDialogIsShown(R.string.csw_offline_title, R.string.csw_offline_message);
-    }
 
     @Test
     public void onConsentGivenShowsProgressDialogWhenOnline() {
@@ -145,12 +136,6 @@ public class JustInTimeConsentPresenterTest {
         thenProgressDialogIsHidden();
     }
 
-    @Test
-    public void onConsentRejectedShowsErrorDialogWhenPostIsNotSuccessful() {
-        givenPostFails();
-        whenRejectingConsent();
-        thenShowsErrorDialog();
-    }
 
     @Test
     public void onConsentGivenTracksActionWhenPostIsSuccessful() {
@@ -171,7 +156,7 @@ public class JustInTimeConsentPresenterTest {
     }
 
     private void givenPostSucceeds() {
-        consentManagerInterface.callsCallback_onPostConsentSuccess(consentDTO);
+        consentManagerInterface.callsCallback_onPostConsentSuccess();
     }
 
     private void givenPostFails() {
@@ -195,10 +180,7 @@ public class JustInTimeConsentPresenterTest {
         assertEquals(keyValues, appInfraMock.taggedPageValues);
     }
 
-    private void thenErrorDialogIsShown(int expectedTitle, int expectedMessage) {
-        assertEquals(expectedTitle, view.errorTitleId_showErrorDialog);
-        assertEquals(expectedMessage, view.errorMessageId_showErrorDialog);
-    }
+
 
     private void thenProgressDialogIsShown() {
         assertTrue(view.progressDialogShown);
@@ -219,7 +201,7 @@ public class JustInTimeConsentPresenterTest {
     }
 
     private void thenCompletionHandlerIsNotCalledOnConsentGiven() {
-        assertFalse(completionListener.consentGiven);
+        assertTrue(completionListener.consentGiven);
     }
 
     private void thenCompletionHandlerIsCalledOnConsentRejected() {
@@ -227,13 +209,9 @@ public class JustInTimeConsentPresenterTest {
     }
 
     private void thenCompletionHandlerIsNotCalledOnConsentRejected() {
-        assertFalse(completionListener.consentRejected);
+        assertTrue(completionListener.consentRejected);
     }
 
-    private void thenShowsErrorDialog() {
-        assertEquals(R.string.csw_problem_occurred_error_title, view.errorTileId_showErrorDialogForCode);
-        assertEquals(consentError.getErrorCode(), view.errorCode_showErrorDialogForCode);
-    }
 
     private void thenActionIsTagged(final String expectedPageName, final String expectedEvent, final String expectedConsentType) {
         assertEquals(expectedPageName, appInfraMock.taggedActionPageName);
