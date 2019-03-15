@@ -16,7 +16,7 @@
   <string name="csw_ok">OK</string>
   <string name="csw_privacy_notice">[ru]Privacy Notice</string>
   <string name="csw_privacy_notice_message">Задайте настройки приватности (см. {уведомление о конфиденциальности}).</string>
-  <string name="csw_privacy_settings">Настройки конфиденциальности</string>
+  <string name="csw_privacy_settings">Конфиденциальность</string>
   <string name="csw_privacy_settings_desc">Задайте настройки приватности (см. {уведомление о конфиденциальности}).</string>
   <string name="csw_problem_occurred_error_message">Возникла проблема (ошибка %1$d). Повторите попытку.</string>
   <string name="csw_problem_occurred_error_title">Возникла проблема</string>
