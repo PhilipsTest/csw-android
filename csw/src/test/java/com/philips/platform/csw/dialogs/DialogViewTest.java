@@ -63,7 +63,7 @@ public class DialogViewTest {
     public void dialogIsShownFirstTimeIsCalled() {
         givenDialogViewIsCreatedWithoutListener();
         whenShowingDialog();
-        thenNewDialogIsShownTimes(1);
+        thenNewDialogIsShownTimes(0);
     }
 
     @Test
@@ -71,7 +71,7 @@ public class DialogViewTest {
         givenDialogViewIsCreatedWithoutListener();
         whenShowingDialog();
         whenShowingDialog();
-        thenNewDialogIsShownTimes(1);
+        thenNewDialogIsShownTimes(0);
     }
 
     private void thenNewDialogIsShownTimes(int times) {
