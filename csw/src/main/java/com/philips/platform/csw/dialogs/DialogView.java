@@ -59,7 +59,9 @@ public class DialogView implements View.OnClickListener {
     }
 
     protected void showButton(FragmentActivity activity) {
-        alertDialogFragment.show(activity.getSupportFragmentManager(), AlertDialogFragment.class.getCanonicalName());
+        if(alertDialogFragment.isVisible()) {
+            alertDialogFragment.show(activity.getSupportFragmentManager(), AlertDialogFragment.class.getCanonicalName());
+        }
     }
 
     protected void setupOkButton() {
