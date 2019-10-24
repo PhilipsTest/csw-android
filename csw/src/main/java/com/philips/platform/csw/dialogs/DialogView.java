@@ -46,7 +46,7 @@ public class DialogView implements View.OnClickListener {
 
     public void hideDialog() {
         isDialogShown = false;
-        if (alertDialogFragment != null) {
+        if (alertDialogFragment != null && alertDialogFragment.isVisible()) {
             alertDialogFragment.dismiss();
         }
     }
@@ -59,7 +59,7 @@ public class DialogView implements View.OnClickListener {
     }
 
     protected void showButton(FragmentActivity activity) {
-        if(alertDialogFragment.isVisible()) {
+        if(alertDialogFragment != null && alertDialogFragment.isVisible()) {
             alertDialogFragment.show(activity.getSupportFragmentManager(), AlertDialogFragment.class.getCanonicalName());
         }
     }
@@ -93,6 +93,7 @@ public class DialogView implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
+        if(alertDialogFragment!=null)
         alertDialogFragment.dismiss();
         if (okListener != null) {
             okListener.onClick(view);
