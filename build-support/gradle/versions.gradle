@@ -11,8 +11,9 @@ def static epochTime() {
     return epoch
 }
 
-ext.baseplatformversion = "2001.0"
+ext.baseplatformversion = "1901.0"
 ext.platformversion = baseplatformversion + "." + epochTime()
+ext.platformversionsuffix = baseplatformversion + ".+"
 
 ext.versions = [
         sdk                                 : 28,
@@ -30,8 +31,7 @@ ext.versions = [
         androidx                            : '1.1.1',
         mockito                             : '2.8.9', // Mockito and Powermock need to be upgraded in tandem, see: https://github.com/powermock/powermock/wiki/Mockito#supported-versions
         powermock                           : '1.7.4', // Mockito and Powermock need to be upgraded in tandem, see: https://github.com/powermock/powermock/wiki/Mockito#supported-versions
-        robolectric                         : '4.1',
-        mobile                              : '1901.0.+'
+        robolectric                         : '4.1'
 ]
 
 ext.builddeps = [
@@ -52,9 +52,9 @@ ext.builddeps = [
 ]
 
 ext.philipsdeps = [
-        AppInfra                    : [group: 'com.philips.platform', name: strings.ail.artifactName, version: versions.mobile, changing: true],
-        pif                         : [group: 'com.philips.platform', name: strings.pif.artifactName, version: versions.mobile, changing: true],
-        uAppFwLib                   : [group: 'com.philips.platform', name: strings.ufw.artifactName, version: versions.mobile, changing: true],
+        AppInfra                    : [group: 'com.philips.platform', name: strings.ail.artifactName, version: platformversionsuffix, changing: true],
+        pif                         : [group: 'com.philips.platform', name: strings.pif.artifactName, version: platformversionsuffix, changing: true],
+        uAppFwLib                   : [group: 'com.philips.platform', name: strings.ufw.artifactName, version: platformversionsuffix, changing: true],
         uid                         : [group: 'com.philips.hsdp-cp', name: strings.uid.artifactName, version: '2.0.+', changing: true],
 ]
 
