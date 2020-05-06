@@ -10,13 +10,14 @@ package com.philips.platform.csw;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.TextView;
 
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.philips.platform.csw.permission.PermissionFragment;
 import com.philips.platform.csw.utils.FontLoader;

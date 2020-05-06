@@ -7,8 +7,9 @@
 
 package com.philips.platform.csw.permission.adapter;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public abstract class BasePermissionViewHolder extends RecyclerView.ViewHolder {
     public BasePermissionViewHolder(View itemView) {

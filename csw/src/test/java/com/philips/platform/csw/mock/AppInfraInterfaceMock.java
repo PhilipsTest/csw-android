@@ -97,7 +97,6 @@ public class AppInfraInterfaceMock implements AppInfraInterface {
     public AppTaggingInterface getTagging() {
         return new AppTaggingInterface() {
 
-
             PrivacyStatus status;
 
             @Override
@@ -216,6 +215,11 @@ public class AppInfraInterfaceMock implements AppInfraInterface {
 
             @Override
             public String getTrackingIdentifier() {
+                return null;
+            }
+
+            @Override
+            public String getVisitorIDAppendToURL(String s) {
                 return null;
             }
 

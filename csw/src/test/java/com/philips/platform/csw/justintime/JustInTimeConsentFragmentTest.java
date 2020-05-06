@@ -5,7 +5,7 @@
 
 package com.philips.platform.csw.justintime;
 
-import android.support.v4.app.FragmentActivity;
+import androidx.fragment.app.FragmentActivity;
 
 import com.philips.platform.appinfra.AppInfra;
 import com.philips.platform.appinfra.tagging.AppTaggingInterface;
@@ -21,7 +21,6 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.robolectric.RobolectricTestRunner;
-import org.robolectric.shadows.support.v4.SupportFragmentTestUtil;
 
 import java.util.Collections;
 
@@ -74,7 +73,7 @@ public class JustInTimeConsentFragmentTest {
         fragment.setPresenter(presenterMock);
         fragment.setProgressDialogView(progressDialogViewMock);
         fragment.setDialogView(dialogViewMock);
-        SupportFragmentTestUtil.startFragment(fragment);
+        //SupportFragmentTestUtil.startFragment(fragment);
     }
 
     @Test

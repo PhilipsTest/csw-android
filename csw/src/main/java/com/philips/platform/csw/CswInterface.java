@@ -9,9 +9,10 @@ package com.philips.platform.csw;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
+
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.philips.platform.csw.injection.AppInfraModule;
 import com.philips.platform.csw.injection.CswComponent;

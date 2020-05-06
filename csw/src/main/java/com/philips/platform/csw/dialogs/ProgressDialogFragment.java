@@ -3,8 +3,10 @@ package com.philips.platform.csw.dialogs;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.view.KeyEvent;
+
+import androidx.annotation.NonNull;
+
 import com.philips.platform.uid.view.widget.AlertDialogFragment;
 
 public class ProgressDialogFragment extends AlertDialogFragment implements DialogInterface.OnKeyListener {

@@ -7,7 +7,8 @@
 
 package com.philips.platform.csw;
 
-import android.support.v4.app.Fragment;
+
+import androidx.fragment.app.Fragment;
 
 import com.philips.platform.uappframework.listener.ActionBarListener;
 

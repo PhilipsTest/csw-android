@@ -8,13 +8,14 @@
 package com.philips.platform.csw.justintime;
 
 import android.os.Bundle;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.VisibleForTesting;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.LayoutRes;
+import androidx.annotation.VisibleForTesting;
 
 import com.philips.platform.csw.CswBaseFragment;
 import com.philips.platform.csw.R;

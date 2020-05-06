@@ -8,9 +8,10 @@
 package com.philips.platform.csw.dialogs;
 
 import android.content.Context;
-import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
+
+import androidx.fragment.app.FragmentActivity;
 
 import com.philips.platform.csw.R;
 import com.philips.platform.uid.thememanager.UIDHelper;

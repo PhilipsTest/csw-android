@@ -8,9 +8,6 @@
 package com.philips.platform.csw.permission.adapter;
 
 import android.graphics.Paint;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.TextPaint;
@@ -21,6 +18,10 @@ import android.text.style.UnderlineSpan;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 
 import com.philips.platform.csw.R;
 import com.philips.platform.csw.permission.ConsentView;
