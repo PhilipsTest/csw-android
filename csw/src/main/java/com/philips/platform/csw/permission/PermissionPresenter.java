@@ -7,7 +7,8 @@
 
 package com.philips.platform.csw.permission;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
+
 import com.philips.platform.appinfra.consentmanager.ConsentManagerInterface;
 import com.philips.platform.appinfra.consentmanager.FetchConsentsCallback;
 import com.philips.platform.appinfra.consentmanager.PostConsentCallback;

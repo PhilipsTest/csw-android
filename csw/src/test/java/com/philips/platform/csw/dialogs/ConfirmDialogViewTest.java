@@ -1,9 +1,10 @@
 package com.philips.platform.csw.dialogs;
 
 import android.content.Context;
-import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.fragment.app.FragmentActivity;
 
 import com.philips.platform.csw.R;
 import com.philips.platform.uid.view.widget.AlertDialogFragment;

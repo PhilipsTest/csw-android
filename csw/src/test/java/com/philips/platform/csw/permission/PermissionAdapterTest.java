@@ -6,7 +6,8 @@
 package com.philips.platform.csw.permission;
 
 import android.app.Fragment;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.philips.platform.csw.permission.adapter.PermissionAdapter;
 import com.philips.platform.pif.chi.ConsentError;

@@ -1,8 +1,9 @@
 package com.philips.platform.csw.mock;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.view.View;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 public class FragmentTransactionMock extends FragmentTransaction {
 

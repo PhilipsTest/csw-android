@@ -1,8 +1,9 @@
 package com.philips.platform.csw.utils;
 
-import android.support.annotation.NonNull;
 import android.text.Spannable;
 import android.text.SpannableString;
+
+import androidx.annotation.NonNull;
 
 import com.philips.platform.csw.permission.uielement.LinkSpan;
 import com.philips.platform.csw.permission.uielement.LinkSpanClickListener;

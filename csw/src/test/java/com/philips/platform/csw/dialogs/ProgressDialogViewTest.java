@@ -1,8 +1,9 @@
 package com.philips.platform.csw.dialogs;
 
 
-import android.support.v4.app.FragmentActivity;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.FragmentActivity;
 
 import com.philips.platform.csw.mock.FragmentActivityMock;
 import com.philips.platform.csw.mock.FragmentManagerMock;

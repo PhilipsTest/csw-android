@@ -75,9 +75,7 @@ dependencies {
     implementation deps.gson
     implementation deps.dagger.dagger
     implementation deps.dagger.androidsupport
-    implementation deps.support.recyclerview
-    implementation deps.support.appcompatv7
-    implementation deps.support.supportv4
+    implementation deps.androidx.recyclerview
     annotationProcessor deps.dagger.compiler
 
 

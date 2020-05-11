@@ -1,9 +1,10 @@
 package com.philips.platform.csw.permission.uielement;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.widget.CompoundButton;
+
+import androidx.annotation.Nullable;
 
 import com.philips.platform.uid.view.widget.Switch;
 

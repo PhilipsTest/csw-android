@@ -7,7 +7,8 @@
 
 package com.philips.platform.csw.utils;
 
-import android.support.annotation.VisibleForTesting;
+
+import androidx.annotation.VisibleForTesting;
 
 import com.philips.platform.appinfra.logging.LoggingInterface;
 import com.philips.platform.csw.CswInterface;

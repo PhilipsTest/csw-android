@@ -12,7 +12,9 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-public class XIconTextView extends android.support.v7.widget.AppCompatTextView {
+import androidx.appcompat.widget.AppCompatTextView;
+
+public class XIconTextView extends AppCompatTextView {
     final String iconFontAssetName = "PUIIcon.ttf";
 
     public XIconTextView(Context context) {
