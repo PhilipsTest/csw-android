@@ -20,6 +20,4 @@
     <dimen name="csw_label_max_width">648dp</dimen>
     <dimen name="csw_top_padding">4dp</dimen>
     <dimen name="csw_dimen_20dp">20dp</dimen>
-
-    <dimen name="csw_dimen_50dp">50dp</dimen>
 </resources>
