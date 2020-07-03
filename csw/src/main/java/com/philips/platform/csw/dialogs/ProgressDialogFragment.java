@@ -22,7 +22,9 @@ public class ProgressDialogFragment extends AlertDialogFragment implements Dialo
     @Override
     public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
+            //On Back Key Pressed, Dismissing the dialog and finishing the activity also.
             dialog.dismiss();
+            //if finish activity not require, please remove getActivity().finish()
             if (getActivity() != null) {
                 this.getActivity().finish();
             }
