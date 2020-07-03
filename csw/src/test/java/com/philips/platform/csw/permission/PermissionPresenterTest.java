@@ -8,9 +8,9 @@ package com.philips.platform.csw.permission;
 import android.content.Context;
 
 import com.google.common.collect.ImmutableMap;
+import com.philips.platform.appinfra.BuildConfig;
 import com.philips.platform.appinfra.consentmanager.ConsentManagerInterface;
 import com.philips.platform.appinfra.consentmanager.PostConsentCallback;
-import com.philips.platform.csw.BuildConfig;
 import com.philips.platform.csw.CswConstants;
 import com.philips.platform.csw.CswDependencies;
 import com.philips.platform.csw.CswInterface;
