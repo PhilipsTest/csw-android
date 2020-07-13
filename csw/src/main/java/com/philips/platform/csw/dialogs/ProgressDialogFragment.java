@@ -24,9 +24,8 @@ public class ProgressDialogFragment extends AlertDialogFragment implements Dialo
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             //On Back Key Pressed, Dismissing the dialog and finishing the activity also.
             dialog.dismiss();
-            //if finish activity not require, please remove getActivity().finish()
             if (getActivity() != null) {
-                this.getActivity().finish();
+                this.getActivity().onBackPressed();
             }
         }
         return true;

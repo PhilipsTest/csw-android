@@ -1,9 +1,9 @@
 package com.philips.platform.csw.justintime;
 
 import com.philips.platform.appinfra.AppInfraInterface;
-import com.philips.platform.appinfra.BuildConfig;
 import com.philips.platform.appinfra.consentmanager.PostConsentCallback;
 import com.philips.platform.appinfra.tagging.AppTaggingInterface;
+import com.philips.platform.csw.BuildConfig;
 import com.philips.platform.csw.CswConstants;
 import com.philips.platform.csw.R;
 import com.philips.platform.csw.utils.TaggingUtils;
