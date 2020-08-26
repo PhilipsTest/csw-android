@@ -142,14 +142,16 @@ public class JustInTimeConsentFragment extends CswBaseFragment implements JustIn
 
     @Override
     public void showErrorDialogForCode(int errorTitleId, int errorCode) {
-        String errorTitle = getContext().getString(errorTitleId);
-        String errorMessage = ErrorMessageCreator.getMessageErrorBasedOnErrorCode(getContext(), errorCode);
-        showErrorDialog(errorTitle, errorMessage);
+        if (getActivity() != null) {
+            String errorTitle = getActivity().getString(errorTitleId);
+            String errorMessage = ErrorMessageCreator.getMessageErrorBasedOnErrorCode(getActivity(), errorCode);
+            showErrorDialog(errorTitle, errorMessage);
+        }
     }
 
     @Override
     public void showProgressDialog() {
-        if(progressDialogView != null) {
+        if (progressDialogView != null) {
             progressDialogView.showDialog(getActivity());
         }
     }
