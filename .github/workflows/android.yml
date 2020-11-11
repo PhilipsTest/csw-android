@@ -5,8 +5,6 @@ on:
   push:
     branches:
       - '**'
-  #pull_request:
-   # branches: [ feature/GitHub_Actions ]
   
   #Set your workflow to run every day of the week at 20:00 UTC(1:30 AM)
   schedule:
@@ -38,9 +36,9 @@ jobs:
         #  ${{github.workspace}}/Source/rap/Source/AppFramework/appFramework/build/outputs/apk/release/*.apk
          # ${{github.workspace}}/source/pim/Source/DemoApp/app/build/outputs/apk/release/*.apk
     
-    #publish to artifactory only for master,develop and release/platform_*
+    #publish to artifactory only for master,develop* and release/platform_*
     - name: Publish To Artifactory
-      if: contains(github.ref,'master') || contains(github.ref,'develop') || contains(github.ref,'release/platform_')        
+      if: startsWith(github.ref, 'refs/heads/master') || startsWith(github.ref, 'refs/heads/develop') || startsWith(github.ref, 'refs/heads/release/platform_')        
       shell: bash
       run: |
            ./gradlew --full-stacktrace saveResDep saveAllResolvedDependenciesGradleFormat artifactoryPublish
